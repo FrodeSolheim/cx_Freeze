@@ -11,9 +11,9 @@
 // this consists of <dir>/lib/library.zip and <dir>/lib
 // where <dir> refers to the directory in which the executable is found
 #if defined(MS_WINDOWS)
-    #define CX_PATH_FORMAT              L"%ls\\lib\\library.zip;%ls\\lib"
+    #define CX_PATH_FORMAT              L"%ls\\library.zip;%ls"
 #else
-    #define CX_PATH_FORMAT              L"%ls/lib/library.zip:%ls/lib"
+    #define CX_PATH_FORMAT              L"%ls/library.zip:%ls"
 #endif
 
 // global variables (used for simplicity)
