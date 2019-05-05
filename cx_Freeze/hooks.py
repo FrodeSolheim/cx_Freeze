@@ -802,7 +802,7 @@ def load_sqlite3(finder, module):
     """In Windows, the sqlite3 module requires an additional dll sqlite3.dll to
        be present in the build directory."""
     if sys.platform == "win32":
-        dll_name = "libsqlite3-0.dll"
-        dll_path = os.path.join(sys.base_prefix, "bin", dll_name)
-        finder.IncludeFiles(dll_path, os.path.join("lib", dll_name))
+        dll_name = "sqlite3.dll"
+        dll_path = os.path.join(sys.base_prefix, "DLLs", dll_name)
+        finder.IncludeFiles(dll_path, dll_name)
 

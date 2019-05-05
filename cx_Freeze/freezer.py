@@ -618,7 +618,7 @@ class Freezer(object):
         for executable in self.executables:
             self._FreezeExecutable(executable)
         targetDir = self.targetDir
-        zipTargetDir = os.path.join(targetDir, "lib")
+        zipTargetDir = targetDir
         fileName = os.path.join(zipTargetDir, "library.zip")
         self._RemoveFile(fileName)
         self._WriteModules(fileName, self.finder)
