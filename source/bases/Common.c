@@ -12,6 +12,8 @@
 // where <dir> refers to the directory in which the executable is found
 #if defined(MS_WINDOWS)
     #define CX_PATH_FORMAT              L"%ls\\library.zip;%ls"
+#elif defined(__APPLE__)
+    #define CX_PATH_FORMAT              L"%ls/../Resources/Python/library.zip:%ls"
 #else
     #define CX_PATH_FORMAT              L"%ls/library.zip:%ls"
 #endif
